@@ -55,10 +55,6 @@
             color: white;
         }
 
-        #decline-button {
-            color: rgb(0, 0, 0);
-            border: 2px solid rgb(0, 0, 0);
-        }
 
         p.overlay-description {
             font-size: 16px;
@@ -149,19 +145,15 @@
     <script type="text/javascript">
         const video = document.getElementById("video");
         const overlay = document.getElementById("overlay");
-        const declineButton = document.getElementById("decline-button");
         const acceptButton = document.getElementById("accept-button");
         video.addEventListener("ended", function () {
-            window.location.href = "https://arcxingye.github.io/rr/qrcode";
+            window.location.href = "https://github.com/kinwang94/rr";
         });
         function buttonClick1(event) {
             event.preventDefault();
             overlay.hidden = true;
             video.play();
             videoClick();
-        }
-        function buttonClick2(event) {
-            window.open("https://xingye.me/game/index.php");
         }
         function videoClick(event) {
             if (event) event.preventDefault();
@@ -172,7 +164,6 @@
             else if (documentElement.msRequestFullscreen) documentElement.msRequestFullscreen();
         }
         acceptButton.addEventListener("click", buttonClick1);
-        declineButton.addEventListener("click", buttonClick2);
         video.addEventListener("click", videoClick);
     </script>
 </body>
